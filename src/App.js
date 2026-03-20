@@ -8,12 +8,10 @@ import ShopkeeperDashboard from './ShopkeeperDashboard';
 import ClientDashboard from './ClientDashboard';
 import './App.css';
 
-// Helper component to protect routes
 const ProtectedRoute = ({ children, allowedRole }) => {
   const { currentUser } = useAuth();
   if (!currentUser) return <Navigate to="/login" />;
   if (allowedRole && currentUser.designation !== allowedRole) {
-    // Redirect to their correct dashboard if they try to access wrong URL
     if(currentUser.designation === 'Admin') return <Navigate to="/admin" />;
     if(currentUser.designation === 'Shopkeeper') return <Navigate to="/shopkeeper" />;
     return <Navigate to="/client" />;
@@ -26,6 +24,10 @@ function App() {
     <AuthProvider>
       <Router>
         <div className="mobile-container">
+          {/* Animated Background Shapes */}
+          <div className="bg-shape shape-1"></div>
+          <div className="bg-shape shape-2"></div>
+          
           <h1 className="app-title">B Mobile</h1>
           <Routes>
             <Route path="/" element={<Navigate to="/login" />} />

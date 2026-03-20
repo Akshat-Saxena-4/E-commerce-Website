@@ -1,127 +1,22 @@
-/* Base & Mobile Container */
-* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
-body { background-color: #ecf0f1; }
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@500;700&display=swap');
 
-.mobile-container {
-  max-width: 480px;
-  margin: 0 auto;
-  min-height: 100vh;
-  background-color: #f4f7f6;
-  padding: 20px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+body {
+  margin: 0;
+  font-family: 'Rajdhani', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  /* YOUR ASTRONAUT IMAGE */
+  background-image: url('background.png');
+  
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  
+  /* Do not add a dark overlay here, we want the image vibrant */
 }
 
-.app-title {
-  text-align: center;
-  color: #2c3e50;
-  margin-bottom: 20px;
-  font-weight: 800;
-  font-size: 24px;
-}
-
-/* Cards & Dashboard */
-.dashboard-card {
-  background: white;
-  padding: 15px;
-  border-radius: 10px;
-  margin-bottom: 15px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
-
-.welcome-text { font-size: 22px; color: #2c3e50; margin-bottom: 5px; }
-
-/* Badges */
-.role-badge {
-  display: inline-block;
-  padding: 4px 8px;
-  border-radius: 12px;
-  font-size: 11px;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-.badge-admin { background-color: #e74c3c; color: white; }
-.badge-shopkeeper { background-color: #f1c40f; color: #2c3e50; }
-.badge-client { background-color: #3498db; color: white; }
-
-/* Forms */
-.form-wrapper { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-.form-group { margin-bottom: 12px; }
-.form-group label { display: block; margin-bottom: 5px; font-size: 14px; color: #7f8c8d; }
-.form-group input, .form-group select {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 14px;
-}
-
-/* Buttons */
-.btn {
-  width: 100%;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  font-size: 14px;
-  cursor: pointer;
-  font-weight: 600;
-  margin-top: 5px;
-  text-align: center;
-}
-.btn-primary { background-color: #3498db; color: white; }
-.btn-success { background-color: #27ae60; color: white; }
-.btn-danger { background-color: #e74c3c; color: white; }
-.btn-secondary { background-color: #bdc3c7; color: #2c3e50; }
-.btn-sm { padding: 8px 15px; font-size: 12px; width: auto; }
-
-.error-msg { color: #e74c3c; text-align: center; margin-bottom: 10px; font-size: 13px; }
-
-/* Product Styling */
-.inline-form {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-.inline-form input { flex: 1; min-width: 100px; }
-.inline-form button { flex: 1; min-width: 80px; }
-
-.product-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 0;
-  border-bottom: 1px solid #eee;
-}
-.product-item:last-child { border-bottom: none; }
-
-.stock-label { color: #27ae60; font-weight: bold; font-size: 12px; }
-
-/* Client Shop Grid */
-.product-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* 2 columns */
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.product-card {
-  background: #f8f9fa;
-  padding: 10px;
-  border-radius: 8px;
-  text-align: center;
-  border: 1px solid #eee;
-}
-
-.product-icon { font-size: 24px; margin-bottom: 5px; }
-.price { color: #e74c3c; font-weight: bold; margin: 5px 0; }
-
-/* User List */
-.user-list {
-  list-style: none;
-  margin-top: 10px;
-}
-.user-list li {
-  background: #f9f9f9;
-  padding: 8px;
-  border-bottom: 1px solid #eee;
-  font-size: 13px;
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
